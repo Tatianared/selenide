@@ -17,9 +17,8 @@ public class CardDeliveryTest {
 
     }
 
-
     @Test
-    void shouldRegisterByAccountNumber() {
+    void shouldRegisterCard() {
         open("http://localhost:9999");
         String planningDate = generateDate(4);
         $("[data-test-id=city] input").setValue("Казань");
