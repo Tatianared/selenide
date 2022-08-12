@@ -1,7 +1,11 @@
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -11,6 +15,22 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
+    private WebDriver driver;
+
+
+    @BeforeEach
+    void setUp() {
+        driver = new ChromeDriver();
+    }
+    @AfterEach
+    void tearDown() {
+        driver.quit();
+        driver = null;
+    }
+
+
+
+
     public String generateDate(int days) {
 
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
