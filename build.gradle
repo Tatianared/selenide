@@ -17,11 +17,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
     testImplementation 'com.codeborne:selenide:5.19.0'
     testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
-<<<<<<< HEAD
 
-=======
-    testImplementation("io.github.bonigarcia:webdrivermanager:5.0.3")
->>>>>>> f83f64430b66d374c2de394af406646a9c814d0d
+
 }
 
 test {
